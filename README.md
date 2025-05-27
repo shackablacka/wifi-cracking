@@ -1,3 +1,20 @@
-# Evil Twin WiFi Attack Suite (No Webhook)
+# Evil Twin WiFi Attack Suite
 
-For ethical testing only.
+⚠️ **For educational and authorized testing only. Do not use on networks you don't own or have explicit permission to test.**
+
+## Features
+
+- GUI interface (Zenity)
+- Captive portals (Facebook, Instagram, Gmail, Office365)
+- Multilingual phishing pages
+- Real-time credential viewer (via SSE)
+- Automatic deauthentication (jamming)
+- Timestamped credential archive
+
+## Requirements
+
+```bash
+sudo apt install aircrack-ng dnsmasq lighttpd php php-cli zenity xterm
+ '''usage
+chmod +x wifi.sh
+sudo ./wifi.sh
