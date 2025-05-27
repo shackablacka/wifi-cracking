@@ -15,6 +15,7 @@
 
 ```bash
 sudo apt install aircrack-ng dnsmasq lighttpd php php-cli zenity xterm
- '''usage
+https://github.com/shackablacka/wifi-cracking.git
+ '''usage  
 chmod +x wifi.sh
 sudo ./wifi.sh
