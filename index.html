@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+    .login-box {
+      margin: 10% auto;
+      width: 300px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #aaa;
+    }
+    input[type="text"], input[type="password"], input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <form method="post" action="login.php">
+      <label id="userLabel">Username</label>
+      <input type="text" name="username" required>
+      <label id="passLabel">Password</label>
+      <input type="password" name="password" required>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    if (lang.startsWith('es')) {
+      document.getElementById("userLabel").innerText = "Usuario";
+      document.getElementById("passLabel").innerText = "Contraseña";
+      document.querySelector('input[type="submit"]').value = "Iniciar sesión";
+    } else if (lang.startsWith('fr')) {
+      document.getElementById("userLabel").innerText = "Nom d'utilisateur";
+      document.getElementById("passLabel").innerText = "Mot de passe";
+      document.querySelector('input[type="submit"]').value = "Connexion";
+    } else if (lang.startsWith('de')) {
+      document.getElementById("userLabel").innerText = "Benutzername";
+      document.getElementById("passLabel").innerText = "Passwort";
+      document.querySelector('input[type="submit"]').value = "Anmelden";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Credential Stream</title>
+  <style>
+    body { background: #000; color: #0f0; font-family: monospace; padding: 20px; }
+    h2 { color: #0f0; }
+    pre { white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h2>Live Credential Stream (Realtime)</h2>
+  <pre id="log">Waiting for data...</pre>
+  <script>
+    const log = document.getElementById("log");
+    const source = new EventSource("sse_log.php");
+    source.onmessage = function(event) {
+      log.textContent = event.data;
+    };
+  </script>
+</body>
+</html>
